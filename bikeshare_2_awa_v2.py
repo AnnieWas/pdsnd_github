@@ -29,6 +29,7 @@ def get_filters():
         print('City chosen: {}'.format(city.title()))
 
     # aks user if they want to filter for month
+    # if input is no the filter will be set for all months
     print('Do you want to set a filter for month?')
     filter_month = input('Enter "yes" or "no":' ).lower()
 
@@ -36,7 +37,8 @@ def get_filters():
         month = 'all'
     else:
 
-    # get user input for month (all, january, february, ... , june)
+    # get user input for one of the 1st 6 months of the year  (all, january, february, ... , june)
+    # all is used, for the case that the user does not whant to filter
         months = ['all', 'january','february', 'march', 'april', 'may', 'june']
         month =input('Enter the name  of the month you want to analyze: ').lower()
 
@@ -48,6 +50,7 @@ def get_filters():
             print('Month chosen: {}'.format(month.title()))
 
     # aks user if they want to filter for day
+    # if input is no the filter will be set for all months
     print('Do you want to set a filter for weekday?')
     filter_day = input('Enter "yes" or "no":' ).lower()
 
@@ -56,6 +59,7 @@ def get_filters():
     else:
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
+    # all is used, for the case that the user does not whant to filter
         days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
         day =input('Enter the name of the weekday you want to analyze: ').lower()
 
