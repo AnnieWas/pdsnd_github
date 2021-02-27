@@ -204,7 +204,7 @@ def user_stats(df):
         print('Latest Year of Birth: ', int(latest_year))
         print('Most Common Year of Birth: ', int(popular_year))
     else:
-        no_year = print('No stats for birth year available for this city.')
+        print('No stats for birth year available for this city.')
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
