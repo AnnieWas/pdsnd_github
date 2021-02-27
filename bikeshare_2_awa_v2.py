@@ -167,7 +167,7 @@ def trip_duration_stats(df):
 
     # display total travel time
     total_travel_time = df['Trip Duration'].sum()
-    print('Total Travel Time:', total_travel_time)
+    print('Total Travel Time:', int(total_travel_time))
 
     # display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
@@ -194,7 +194,7 @@ def user_stats(df):
         genders = df['Gender'].value_counts()
         print('Counts of Genders: ', genders)
     else:
-        no_gender = print('No stats for gender available for this city.')
+        print('No stats for gender available for this city.')
 
     print('\n')
     # Display earliest, most recent, and most common year of birth
@@ -208,7 +208,7 @@ def user_stats(df):
         print('Latest Year of Birth: ', int(latest_year))
         print('Most Common Year of Birth: ', int(popular_year))
     else:
-        no_year = print('No stats for birth year available for this city.')
+        print('No stats for birth year available for this city.')
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
